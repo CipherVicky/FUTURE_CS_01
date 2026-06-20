@@ -17,7 +17,7 @@
 | **Application** | AltoroMutual Online Banking Demo |
 | **Hosted By** | IBM (intentionally vulnerable demo) |
 | **Environment** | Internet-facing, authorised for security testing |
-| **Test Date** | 03–04 June 2026 |
+| **Test Date** | 19-20 June 2026 |
 | **Tester** | Bura Sam vivek |
 
 AltoroMutual is a fictional online banking application maintained by IBM as a safe, legal target for practising web application security testing techniques.
