@@ -38,3 +38,44 @@ The assessment focused on **OWASP A03:2021 – Injection and OWASP A01:2021/A05:
 | `/sitemap.xml` | GET | `Response Header` | Missing CSP HeaderPARA |
 | `/login.jsp` | GET | Login Form | Cross-Site Request Forgery (CSRF) |
 | `/` | GET | `N/A` | Clickjacking |
+
+### Findings Overview
+
+| ID | Vulnerability | Severity | CVSS v3.1 |
+|---|---|---|---|
+| VA-001 | DOM-Based XSS — `/default.aspx` | 🟠 HIGH| 8.8 |
+| VA-002 | Reflected Cross-Site Scripting (XSS) — `/sendFeedback` | 🟠 HIGH | 6.1 - 8.8 |
+| VA-003 | SQL Injection — `/doLogin` | 🔴 CRITICAL | 9.8 |
+| VA-004 | Missing CSP HeaderPARA — `/sitemap.xml` | 🟡 MEDIUM | 5.3 |
+| VA-005 | Cross-Site Request Forgery (CSRF) — `/login.jsp` | 🟡 MEDIUM | 6.5 |
+| VA-006 | Clickjacking — `/` | 🟡 MEDIUM | 6.5 |
+
+**6 vulnerabilities confirmed — 3 Critical · 2 High · 1 Medium**
+
+---
+
+## 🛠️ Tools Used
+
+| Tool | Version | Purpose |
+|---|---|---|
+| **Burp Suite Community** | 2023.x | HTTP proxy, request interception, manual payload delivery |
+| **OWASP ZAP** | 2.14 | Automated scanning and spider crawl |
+| **SQLMap** | 1.7.x | SQL injection detection and automated exploitation |
+| **Nikto** | 2.1.6 | Web server misconfiguration and CVE scanning |
+| **Firefox DevTools** | 125+ | DOM inspection, JavaScript debugging, cookie analysis |
+
+
+## 📁 Repository Structure
+
+
+├── README.md
+├── VULNERABILITY_ASSESSMENT_REPORT.pdf
+└── evidence/
+    ├── VA-001_Reflected_XSS.jpg
+    ├── VA-002_Stored_XSS.jpg
+    ├── VA-003_DOM_XSS.jpg
+    ├── VA-004_SQLi_ErrorBased.jpg
+    ├── VA-005_SQLi_UNION.jpg
+    └── VA-006_SQLi_BlindBoolean.jpg
+
+*Prepared by Sam vivek · 20 June 2026 · CONFIDENTIAL — distribute only to authorised personnel*
