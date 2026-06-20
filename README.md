@@ -23,3 +23,18 @@
 AltoroMutual is a fictional online banking application maintained by IBM as a safe, legal target for practising web application security testing techniques.
 
 ---
+
+## 🎯 Scope
+
+The assessment focused on **OWASP A03:2021 – Injection and OWASP A01:2021/A05:2021** related security weaknesses.
+
+### In-Scope Endpoints
+
+| Endpoint | Method | Parameter(s) | Attack Type |
+|---|---|---|---|
+| `/default.aspx` | GET | `URL Fragment (#fragment)` | DOM-Based XSS |
+| `/sendFeedback` | POST | `comment`, `name` | Reflected Cross-Site Scripting (XSS) |
+| `/doLogin` | POST | `uid`, `passw` | SQL Injection (SQLi) |
+| `/sitemap.xml` | GET | `Response Header` | Missing CSP HeaderPARA |
+| `/login.jsp` | GET | Login Form | Cross-Site Request Forgery (CSRF) |
+| `/` | GET | `N/A` | Clickjacking |
